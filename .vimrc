@@ -49,6 +49,9 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Golang formatting
 Plugin 'fatih/vim-go'
 
+" TypeScript formatting
+Plugin 'leafgarland/typescript-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -83,6 +86,9 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Use UTF-8
 set encoding=utf-8
+
+" Python Syntax checker
+let g:syntastic_python_checkers=['flake8']
 
 "python with virtualenv support
 py << EOF
