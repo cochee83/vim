@@ -114,6 +114,7 @@ let g:SimpylFold_docstring_preview=1
 " Make code look pretty
 let python_highlight_all=1
 syntax on "turn on syntax highlighting
+set hlsearch
 
 " Open/Close NERDTree
 map <C-n> :NERDTreeToggle<CR>
