@@ -74,8 +74,8 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 "
-" Proper PEP8 indentation
-au BufNewFile,BufRead *.py,*.php set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+" 4 space indentation
+au BufNewFile,BufRead *.py,*.php,*.cpp,*.c,*ts set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
 " For Full Stack Development
 au BufNewFile,BufRead *.js,*.html,*.css,*.twig,*.rb set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
@@ -89,6 +89,11 @@ set encoding=utf-8
 
 " Python Syntax checker
 let g:syntastic_python_checkers=['flake8']
+
+" PHP Syntax checker
+let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpcs_args = '--standard=psr2'
+let g:syntastic_php_phpmd_post_args = 'cleancode,codesize,controversial,design,unusedcode'
 
 "python with virtualenv support
 py << EOF
