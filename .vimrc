@@ -21,6 +21,7 @@ Plugin 'vim-scripts/indentpython.vim'
 
 " Autocompletion
 Plugin 'Valloric/YouCompleteMe'
+let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 
 " Syntax Checking/Highlighting
 " mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -87,6 +88,9 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " Use UTF-8
 set encoding=utf-8
 
+" Use elflord color scheme
+colorscheme elflord
+
 " Python Syntax checker
 let g:syntastic_python_checkers=['flake8']
 
@@ -96,7 +100,7 @@ let g:syntastic_php_phpcs_args = '--standard=psr2'
 let g:syntastic_php_phpmd_post_args = 'cleancode,codesize,controversial,design,unusedcode'
 
 "python with virtualenv support
-py << EOF
+py3 << EOF
 import os
 import sys
 if 'VIRTUAL_ENV' in os.environ:
