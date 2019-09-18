@@ -54,6 +54,16 @@ Plugin 'fatih/vim-go'
 " TypeScript formatting
 Plugin 'leafgarland/typescript-vim'
 
+" Kotlin formatting
+Plugin 'udalov/kotlin-vim'
+
+" Solidity formatting
+Plugin 'tomlion/vim-solidity'
+
+" JSX formatting
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -77,10 +87,10 @@ set foldlevel=99
 nnoremap <space> za
 "
 " 4 space indentation
-au BufNewFile,BufRead *.py,*.php,*.cpp,*.c,*ts set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+au BufNewFile,BufRead *.py,*.php,*.cpp,*.c,*ts,*kt set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
 " For Full Stack Development
-au BufNewFile,BufRead *.js,*.html,*.css,*.twig,*.rb set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufRead *.js,*.json,*.html,*.css,*.twig,*.rb,*.sol set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 " Flagging unnecessary whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
@@ -88,9 +98,6 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Use UTF-8
 set encoding=utf-8
-
-" Use elflord color scheme
-colorscheme elflord
 
 " syntastic recommended settings
 set statusline+=%#warningmsg#
