@@ -33,6 +33,7 @@ execute pathogen#infect()
 " Color Schemes
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
+colorscheme elflord
 
 " File Browsing 
 Plugin 'scrooloose/nerdtree'
