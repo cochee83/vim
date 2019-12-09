@@ -64,6 +64,9 @@ Plugin 'tomlion/vim-solidity'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
+" Vdebug
+Plugin 'vim-vdebug/vdebug'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -87,7 +90,7 @@ set foldlevel=99
 nnoremap <space> za
 "
 " 4 space indentation
-au BufNewFile,BufRead *.py,*.php,*.cpp,*.c,*ts,*kt set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+au BufNewFile,BufRead *.py,*.php,*.go,*.cpp,*.c,*ts,*kt set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
 " For Full Stack Development
 au BufNewFile,BufRead *.js,*.json,*.html,*.css,*.twig,*.rb,*.sol set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
