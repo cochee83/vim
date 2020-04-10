@@ -28,7 +28,11 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 " curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 execute pathogen#infect()
 " cd ~/.vim/bundle && \
+" git clone https://github.com/tpope/vim-sensible.git
+" cd ~/.vim/bundle && \
 " git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+" Quit vim and start it back up to reload it, then type:
+" :Helptags
 
 " Color Schemes
 Plugin 'jnurmine/Zenburn'
