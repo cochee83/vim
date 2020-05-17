@@ -97,7 +97,7 @@ nnoremap <space> za
 au BufNewFile,BufRead *.py,*.php,*.go,*.cpp,*.c,*ts,*kt set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
 " For Full Stack Development
-au BufNewFile,BufRead *.js,*.json,*.html,*.css,*.twig,*.rb,*.sol set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufRead *.js,*.json,*.html,*.css,*.scss,*.twig,*.rb,*.sol set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 " Flagging unnecessary whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
@@ -121,7 +121,7 @@ let g:syntastic_python_checkers=['flake8']
 
 " PHP Syntax checker
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
-let g:syntastic_php_phpcs_args = '--standard=psr2'
+let g:syntastic_php_phpcs_args = '--standard=psr12'
 let g:syntastic_php_phpmd_post_args = 'cleancode,codesize,controversial,design,unusedcode'
 
 " Javascript Syntax checker
