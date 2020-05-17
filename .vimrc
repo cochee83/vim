@@ -21,7 +21,6 @@ Plugin 'vim-scripts/indentpython.vim'
 
 " Autocompletion
 Plugin 'Valloric/YouCompleteMe'
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 
 " Syntax Checking/Highlighting
 " mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -94,7 +93,7 @@ set foldlevel=99
 nnoremap <space> za
 "
 " 4 space indentation
-au BufNewFile,BufRead *.py,*.php,*.go,*.cpp,*.c,*ts,*kt set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+au BufNewFile,BufRead *.py,*.php,*.go,*.cpp,*.c,*.java,*.cs,*ts,*kt,*yaml set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
 " For Full Stack Development
 au BufNewFile,BufRead *.js,*.json,*.html,*.css,*.scss,*.twig,*.rb,*.sol set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
@@ -117,7 +116,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Python Syntax checker
-let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_checkers=['flake8', 'pylint', 'pydocstyle']
 
 " PHP Syntax checker
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
