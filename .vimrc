@@ -156,6 +156,10 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 " Line numbering
 set nu
 
+" YouCompleteMe Shortcuts
+let g:Ycm_autoclose_preview_window_after_completion=1
+map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 
 set history=1000    "Store lots of :cmdLine history
 
@@ -186,6 +190,9 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 " ================ Virtual Settings  =================
 "
 set virtualedit=all
+
+" ================ Clipboard =================
+set clipboard=unnamed
 
 " ================ Map Settings  =================
 "
